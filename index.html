@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Atlas Development - Home</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^([^/]+)/$ $1.html
+    RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.html
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !(\[a-zA-Z0-9]{1,5}|/)$
+    RewriteRule (.*)$ /$1/ [R=301,L]
+</head>
+<style>
+    body {background-color: black;}
+    h1   {
+        color: blue;
+        font-family: 'Roboto', sans-serif;
+        font-size: 40px;
+    }
+    p    {color: red;}
+    .button {
+        border: none;
+        color: grey;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        border-radius: 4px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .button1 {
+        background-color: black;
+        color: white;
+        border: 2px solid black;
+    }
+
+    .button1:hover {
+        background-color: #363c47;
+        color: white;
+        border: 2px solid #363c47;
+    }
+</style>
+
+<center>
+    <h1>Atlas Development</h1>
+</center>
+
+<center>
+<body>
+    <a href="/index.html">
+        <button class="button button1">Home</button>
+    </a>
+    <a href="/discord.html">
+        <button class="button button1">Discord Development</button>
+    </a>
+    <a href="/fivem.html">
+        <button class="button button1">FiveM Development</button>
+    </a>
+    <a href="https://discord.gg/6wxdQMrruw">
+        <button class="button button1">Support Server</button>
+    </a>
+</body>
+</center>
+
+
+<center><footer>©️ Atlas Development 2024</footer></center>
+</html>
