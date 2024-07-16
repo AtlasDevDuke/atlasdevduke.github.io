@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Atlas Development - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- add this for mobile responsiveness -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,38 +11,44 @@
         body {
             background-color: black;
             text-align: center; /* center the content */
+            margin: 0; /* add this to remove default margin */
+            padding: 0; /* add this to remove default padding */
         }
         h1 {
             color: blue;
             font-family: 'Roboto', sans-serif;
             font-size: 40px;
+            margin: 0; /* add this to remove default margin */
         }
-        .header img {
-            float: left;
+       .header {
+            display: flex; /* add this to make the image and text align properly */
+            align-items: center; /* add this to make the image and text align properly */
+            justify-content: center; /* add this to center the image and text horizontally */
+        }
+       .header img {
             width: 100px;
             height: 100px;
             background: #555;
-        }
-
-        .header h1 {
-            position: relative;
-            top: 18px;
-            left: 10px;
+            margin: 10px; /* add this to add some space around the image */
         }
         h2 {
             color: white;
             font-family: 'Roboto', sans-serif;
             font-size: 25px;
+            margin: 20px 0; /* add this to add some space around the heading */
         }
         p {
             color: white;
+            margin: 20px 0; /* add this to add some space around the paragraph */
         }
         footer {
             color: white;
             font-family: 'Roboto', sans-serif;
             font-size: 12px;
+            text-align: center; /* center the footer text */
+            padding: 20px; /* add this to add some space around the footer */
         }
-        .button {
+       .button {
             border: none;
             color: grey;
             padding: 10px 20px;
@@ -55,12 +62,12 @@
             border-radius: 4px;
             font-family: 'Roboto', sans-serif;
         }
-        .button1 {
+       .button1 {
             background-color: black;
             color: white;
             border: 2px solid black;
         }
-        .button1:hover {
+       .button1:hover {
             background-color: #363c47;
             color: white;
             border: 2px solid #363c47;
@@ -69,25 +76,35 @@
             display: inline-block;
             text-decoration: none;
         }
+
+        /* add this media query to make the buttons stack on top of each other on mobile devices */
+        @media only screen and (max-width: 768px) {
+           .button {
+                display: block;
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <img src="/favicon.ico" alt="Atlas Development Logo" />
+        <img src="/favicon.ico" alt="Atlas Development Logo"/>
         <h1>Atlas Development</h1>
     </div>
 
     <a href="/index"><button class="button button1">Home</button></a>
     <a href="/discord"><button class="button button1">Discord Development</button></a>
     <a href="/fivem"><button class="button button1">FiveM Development</button></a>
+    <a href="/tos"><button class="button button1">Terms of Service</button></a>
     <a href="https://discord.gg/6wxdQMrruw"><button class="button button1">Support Server</button></a>
 
     <h2>
         Welcome to Atlas Development!
     </h2>
-</body>
 
-<footer>
-    <p>©️ Atlas Development 2024</p>
-</footer>
+    <footer>
+        <p>©️ Atlas Development 2024</p>
+    </footer>
+</body>
 </html>
